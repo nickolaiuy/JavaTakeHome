@@ -1,6 +1,6 @@
 
 public class ItemSeparator {
-	private String delimiter = "\\$\\$##";
+	private final String regex = "\\${2}\\#{2}";
 	private String rawInput;
 	private String [] parsedString;
 	private String itemName;
@@ -39,7 +39,7 @@ public class ItemSeparator {
 	
 	private boolean checkValidInput() {
 		
-		if (rawInput.split(delimiter).length !=3) {
+		if (rawInput.split(regex).length !=3) {
 			return false;
 		}
 		else {
@@ -49,7 +49,7 @@ public class ItemSeparator {
 	
 	private void parseRawInput() {
 		
-		parsedString = rawInput.split(delimiter);
+		parsedString = rawInput.split(regex);
 	}
 	
 	private boolean isDouble(String price) 

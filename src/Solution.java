@@ -9,6 +9,8 @@ public class Solution {
 		   String sub = sc.nextLine();
 		 
 		   //"ItemName$$##ItemPrice$$##ItemQuantity"//
+		   //Bread$$##12.5$$##10
+		   //Mobile Phone$$##599$$##2
 	        ItemSeparator itemData = new ItemSeparator(sub);
 	        itemData.parseInput();
 	        
